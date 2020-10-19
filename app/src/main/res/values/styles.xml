@@ -1,0 +1,23 @@
+<resources>
+    <!-- Base application theme. -->
+    <style name="AppTheme" parent="Theme.AppCompat.NoActionBar">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">@color/primaryColor</item>
+        <item name="colorPrimaryDark">@color/primaryDarkColor</item>
+        <item name="colorAccent">@color/colorAccent</item>
+        <item name="font">@font/roboto</item>
+    </style>
+
+    <style name="LoginButton" parent="TextAppearance.AppCompat.Widget.Button.Borderless.Colored">
+
+    </style>
+
+    <style name="RaiseButton" parent="Widget.AppCompat.Button.Colored">
+        <item name="backgroundTint">@color/primaryDarkColor</item>
+    </style>
+
+    <style name="FlatButton" parent="Widget.AppCompat.Button.Borderless.Colored">
+        <item name="backgroundTint">@color/colorAccent</item>
+    </style>
+
+</resources>

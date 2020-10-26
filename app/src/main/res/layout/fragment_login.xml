@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/background_base"
+    android:background="@drawable/dj"
     tools:context=".LoginFragment">
 
 
@@ -28,7 +28,7 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="24dp"
         android:fontFamily="@font/roboto"
-        android:text="Sing Up"
+        android:text="Sign Up"
         android:textAllCaps="false"
         android:textAppearance="@style/TextAppearance.AppCompat.Medium"
         android:textColor="@color/colorAccent"
@@ -71,7 +71,7 @@
         android:layout_marginBottom="8dp"
         android:autofillHints="opa"
         android:background="@drawable/background_et"
-        android:drawableStart="@drawable/ic_user"
+        android:drawableEnd="@drawable/ic_user"
         android:hint="User Name"
         android:inputType="text"
         android:padding="16dp"
@@ -91,7 +91,7 @@
         android:layout_marginTop="8dp"
         android:layout_marginEnd="24dp"
         android:background="@drawable/background_et"
-        android:drawableStart="@drawable/ic_password"
+        android:drawableEnd="@drawable/ic_password"
         android:hint="Password"
         android:inputType="textPassword"
         android:padding="16dp"

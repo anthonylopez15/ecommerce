@@ -1,23 +1,48 @@
 <resources>
     <!-- Base application theme. -->
-    <style name="AppTheme" parent="Theme.AppCompat.NoActionBar">
+    <style name="AppTheme" parent="Theme.MaterialComponents.Light.NoActionBar">
         <!-- Customize your theme here. -->
         <item name="colorPrimary">@color/primaryColor</item>
         <item name="colorPrimaryDark">@color/primaryDarkColor</item>
-        <item name="colorAccent">@color/colorAccent</item>
+        <item name="colorPrimaryVariant">@color/primaryLightColor</item>
+        <item name="colorOnPrimary">@color/primaryTextColor</item>
+        <item name="colorSecondary">@color/secondaryColor</item>
+        <item name="colorSecondaryVariant">@color/secondaryDarkColor</item>
+        <item name="colorOnSecondary">@color/secondaryTextColor</item>
         <item name="font">@font/roboto</item>
     </style>
 
-    <style name="LoginButton" parent="TextAppearance.AppCompat.Widget.Button.Borderless.Colored">
-
+    <style name="RaiseButtonPress" parent="Widget.MaterialComponents.Button">
+        <item name="cornerRadius">4dp</item>
+        <item name="backgroundTint">@color/secondaryColor</item>
+        <item name="android:textColor">@color/secondaryTextColor</item>
+        <item name="android:textAppearance">@style/TextAppearance.AppCompat.Medium</item>
+        <item name="android:paddingTop">@dimen/spacing_medium</item>
+        <item name="android:paddingBottom">@dimen/spacing_medium</item>
     </style>
 
-    <style name="RaiseButton" parent="Widget.AppCompat.Button.Colored">
-        <item name="backgroundTint">@color/primaryDarkColor</item>
+    <style name="RaiseButtonNoPress" parent="Widget.MaterialComponents.Button.OutlinedButton">
+        <item name="cornerRadius">4dp</item>
+        <item name="android:paddingTop">@dimen/spacing_medium</item>
+        <item name="strokeColor">@color/primaryTextColor</item>
+        <item name="strokeWidth">1dp</item>
+        <item name="android:textColor">@color/primaryTextColor</item>
+        <item name="android:paddingBottom">@dimen/spacing_medium</item>
+        <item name="android:textAppearance">@style/TextAppearance.AppCompat.Medium</item>
     </style>
 
-    <style name="FlatButton" parent="Widget.AppCompat.Button.Borderless.Colored">
-        <item name="backgroundTint">@color/colorAccent</item>
+    <style name="StyledTilEditTextTheme">
+        <item name="colorControlNormal">@color/primaryTextColor</item>
+        <item name="colorControlActivated">@color/primaryTextColor</item>
     </style>
+
+    <style name="StyledTilEditText">
+        <item name="android:theme">@style/StyledTilEditTextTheme</item>
+        <item name="hintTextColor">?attr/colorOnPrimary</item>
+<!--        <item name="startIconTint">?attr/colorOnPrimary</item>-->
+        <item name="boxStrokeColor">?attr/colorOnPrimary</item>
+        <item name="boxBackgroundColor">?attr/colorOnSecondary</item>
+    </style>
+
 
 </resources>

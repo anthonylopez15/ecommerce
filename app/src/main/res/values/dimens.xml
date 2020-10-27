@@ -3,4 +3,6 @@
     <dimen name="spacing_normal">16dp</dimen>
     <dimen name="spacing_low">8dp</dimen>
     <dimen name="spacing_medium">12dp</dimen>
+    <dimen name="spacing_large">24dp</dimen>
+    <dimen name="spacing_extra_large">32dp</dimen>
 </resources>

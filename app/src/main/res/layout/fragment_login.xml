@@ -29,83 +29,109 @@
 
     <com.google.android.material.button.MaterialButton
         android:id="@+id/button_login"
-        style="@style/RaiseButtonPress"
+        style="@style/Button.Contained"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="@dimen/spacing_normal"
-        android:layout_marginTop="32dp"
         android:layout_marginEnd="@dimen/spacing_low"
         android:text="@string/log_in"
         android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@id/content"
         app:layout_constraintEnd_toStartOf="@+id/button_registration"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/topAppBar"
         app:layout_constraintWidth_percent="0.36" />
 
-
     <com.google.android.material.button.MaterialButton
         android:id="@+id/button_registration"
-        style="@style/RaiseButtonNoPress"
+        style="@style/Button.Outlined"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="@dimen/spacing_low"
         android:layout_marginEnd="@dimen/spacing_normal"
         android:text="@string/registration"
         android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="@+id/button_login"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toEndOf="@id/button_login"
         app:layout_constraintTop_toTopOf="@id/button_login" />
 
     <androidx.core.widget.NestedScrollView
-        android:layout_width="0dp"
+        android:id="@+id/content"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginStart="@dimen/spacing_normal"
-        android:layout_marginTop="32dp"
         android:layout_marginEnd="@dimen/spacing_normal"
-        app:layout_behavior="@string/appbar_scrolling_view_behavior"
+        android:fillViewport="true"
+        app:layout_constraintBottom_toTopOf="@id/medias_layout"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/button_login">
 
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="vertical">
+        <include layout="@layout/fragment_registration_component" />
 
-            <com.google.android.material.textfield.TextInputLayout
-                android:id="@+id/tf_user_name"
-                style="@style/StyledTilEditText"
-                android:layout_width="match_parent"
-                app:endIconMode="clear_text"
-                android:layout_height="wrap_content"
-                android:hint="@string/user_name"
-                app:startIconDrawable="@drawable/ic_user">
-
-                <com.google.android.material.textfield.TextInputEditText
-                    android:layout_width="match_parent"
-                    android:inputType="textWebEditText"
-                    android:layout_height="wrap_content" />
-            </com.google.android.material.textfield.TextInputLayout>
-
-            <com.google.android.material.textfield.TextInputLayout
-                android:layout_marginTop="@dimen/spacing_low"
-                android:id="@+id/tf_password"
-                style="@style/StyledTilEditText"
-                app:endIconMode="password_toggle"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:hint="@string/password"
-                app:startIconDrawable="@drawable/ic_lock">
-
-                <com.google.android.material.textfield.TextInputEditText
-                    android:layout_width="match_parent"
-                    android:inputType="textPassword"
-                    android:layout_height="wrap_content" />
-            </com.google.android.material.textfield.TextInputLayout>
-
-        </LinearLayout>
 
     </androidx.core.widget.NestedScrollView>
+
+
+    <LinearLayout
+        android:id="@+id/medias_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="@dimen/spacing_normal"
+        android:gravity="center_horizontal"
+        android:orientation="horizontal"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/content">
+
+        <com.google.android.material.floatingactionbutton.ExtendedFloatingActionButton
+            android:id="@+id/floatingActionButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:backgroundTint="@color/primaryColor"
+            app:elevation="0dp"
+            app:icon="@drawable/ic_facebook"
+            app:iconTint="@color/secondaryColor"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:rippleColor="@color/primaryDarkColor"
+            app:shapeAppearance="?attr/shapeAppearanceOverlay"
+            app:strokeColor="@color/secondaryColor"
+            app:strokeWidth="0.1dp" />
+
+        <com.google.android.material.floatingactionbutton.ExtendedFloatingActionButton
+            android:id="@+id/floatingActionButton2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:backgroundTint="@color/primaryColor"
+            app:elevation="0dp"
+            app:icon="@drawable/ic_facebook"
+            app:iconTint="@color/secondaryColor"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:rippleColor="@color/primaryDarkColor"
+            app:shapeAppearance="?attr/shapeAppearanceOverlay"
+            app:strokeColor="@color/secondaryColor"
+            app:strokeWidth="0.1dp" />
+
+        <com.google.android.material.floatingactionbutton.ExtendedFloatingActionButton
+            android:id="@+id/floatingActionButton3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:backgroundTint="@color/primaryColor"
+            app:elevation="0dp"
+            app:icon="@drawable/ic_facebook"
+            app:iconTint="@color/secondaryColor"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:rippleColor="@color/primaryDarkColor"
+            app:shapeAppearance="?attr/shapeAppearanceOverlay"
+            app:strokeColor="@color/secondaryColor"
+            app:strokeWidth="0.1dp" />
+
+    </LinearLayout>
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

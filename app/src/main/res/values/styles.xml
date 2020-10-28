@@ -12,6 +12,28 @@
         <item name="font">@font/roboto</item>
     </style>
 
+    <style name="ShapeAppearance.App.SmallComponent" parent="ShapeAppearance.MaterialComponents.LargeComponent">
+        <item name="cornerFamily">rounded</item>
+        <item name="cornerSize">4dp</item>
+        <item name="elevation">0dp</item>
+    </style>
+
+    <style name="Widget.App.FloatingActionButtonSquare" parent="Widget.MaterialComponents.ExtendedFloatingActionButton.Icon">
+        <item name="materialThemeOverlay">@style/ThemeOverlay.App.FloatingActionButton</item>
+        <item name="shapeAppearanceOverlay">@style/ShapeAppearance.App.SmallComponent</item>
+   </style>
+
+    <style name="Widget.App.FloatingActionButton" parent="Widget.MaterialComponents.FloatingActionButton">
+        <item name="materialThemeOverlay">@style/ThemeOverlay.App.FloatingActionButton</item>
+        <item name="android:foreground">@drawable/circle_border</item>
+    </style>
+
+    <style name="ThemeOverlay.App.FloatingActionButton" parent="">
+        <item name="colorSecondary">@color/primaryColor</item>
+        <item name="colorOnSecondary">@color/secondaryColor</item>
+        <item name="colorOnSurface">@color/primaryColor</item>
+    </style>
+
     <style name="Button.Contained" parent="Widget.MaterialComponents.Button">
         <item name="cornerRadius">4dp</item>
         <item name="backgroundTint">@color/secondaryColor</item>
@@ -50,6 +72,17 @@
         <item name="boxBackgroundColor">?attr/colorOnSecondary</item>
     </style>
 
+
+    <style name="StyledFabTheme">
+        <item name="colorSecondary">@color/primaryColor</item>
+        <item name="colorOnSecondary">@color/secondaryColor</item>
+        <item name="colorOnSurface">@color/secondaryColor</item>
+        <item name="android:foreground">@drawable/circle_border</item>
+    </style>
+
+    <style name="CustomFab">
+        <item name="android:theme">@style/StyledFabTheme</item>
+    </style>
 
 
 </resources>

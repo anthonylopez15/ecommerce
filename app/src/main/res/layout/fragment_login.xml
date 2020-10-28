@@ -7,24 +7,29 @@
     android:background="@android:color/white"
     tools:context=".LoginFragment">
 
-    <com.google.android.material.appbar.MaterialToolbar
+    <com.google.android.material.appbar.AppBarLayout
         android:id="@+id/topAppBar"
-        style="@style/Widget.MaterialComponents.Toolbar.Primary"
         android:layout_width="match_parent"
-        android:layout_height="?attr/actionBarSize"
-        android:elevation="0dp"
+        android:layout_height="wrap_content"
+        app:elevation="0dp"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:navigationIcon="@drawable/ic_arrow_back">
+        app:layout_constraintTop_toTopOf="parent">
 
-        <TextView
-            android:id="@+id/toolbar_title"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_gravity="center"
-            android:text="@string/log_in"
-            android:textStyle="bold" />
-    </com.google.android.material.appbar.MaterialToolbar>
+        <com.google.android.material.appbar.MaterialToolbar
+            style="@style/Widget.MaterialComponents.Toolbar.Primary"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            app:navigationIcon="@drawable/ic_arrow_back">
+
+            <TextView
+                android:id="@+id/toolbar_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:text="@string/log_in"
+                android:textStyle="bold" />
+        </com.google.android.material.appbar.MaterialToolbar>
+    </com.google.android.material.appbar.AppBarLayout>
 
 
     <com.google.android.material.button.MaterialButton
@@ -63,6 +68,7 @@
         android:layout_marginStart="@dimen/spacing_normal"
         android:layout_marginEnd="@dimen/spacing_normal"
         android:fillViewport="true"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior"
         app:layout_constraintBottom_toTopOf="@id/medias_layout"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -86,50 +92,25 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/content">
 
-        <com.google.android.material.floatingactionbutton.ExtendedFloatingActionButton
-            android:id="@+id/floatingActionButton"
+        <com.google.android.material.floatingactionbutton.FloatingActionButton
+            android:id="@+id/fab_facebook"
+            style="@style/Widget.App.FloatingActionButton"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            app:backgroundTint="@color/primaryColor"
-            app:elevation="0dp"
-            app:icon="@drawable/ic_facebook"
-            app:iconTint="@color/secondaryColor"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:rippleColor="@color/primaryDarkColor"
-            app:shapeAppearance="?attr/shapeAppearanceOverlay"
-            app:strokeColor="@color/secondaryColor"
-            app:strokeWidth="0.1dp" />
+            android:layout_gravity="center_horizontal"
+            android:layout_marginEnd="@dimen/spacing_low"
+            android:src="@drawable/ic_facebook"
+            app:elevation="0dp" />
 
-        <com.google.android.material.floatingactionbutton.ExtendedFloatingActionButton
-            android:id="@+id/floatingActionButton2"
+        <com.google.android.material.floatingactionbutton.FloatingActionButton
+            android:id="@+id/fab_instagram"
+            style="@style/Widget.App.FloatingActionButton"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            app:backgroundTint="@color/primaryColor"
-            app:elevation="0dp"
-            app:icon="@drawable/ic_facebook"
-            app:iconTint="@color/secondaryColor"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:rippleColor="@color/primaryDarkColor"
-            app:shapeAppearance="?attr/shapeAppearanceOverlay"
-            app:strokeColor="@color/secondaryColor"
-            app:strokeWidth="0.1dp" />
-
-        <com.google.android.material.floatingactionbutton.ExtendedFloatingActionButton
-            android:id="@+id/floatingActionButton3"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            app:backgroundTint="@color/primaryColor"
-            app:elevation="0dp"
-            app:icon="@drawable/ic_facebook"
-            app:iconTint="@color/secondaryColor"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:rippleColor="@color/primaryDarkColor"
-            app:shapeAppearance="?attr/shapeAppearanceOverlay"
-            app:strokeColor="@color/secondaryColor"
-            app:strokeWidth="0.1dp" />
+            android:layout_gravity="center_horizontal"
+            android:layout_marginEnd="@dimen/spacing_low"
+            android:src="@drawable/ic_instagram"
+            app:elevation="0dp" />
 
     </LinearLayout>
 

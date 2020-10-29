@@ -12,7 +12,7 @@
         <item name="font">@font/roboto</item>
     </style>
 
-    <style name="ShapeAppearance.App.SmallComponent" parent="ShapeAppearance.MaterialComponents.LargeComponent">
+    <style name="ShapeAppearance.App.SmallComponent" parent="ShapeAppearance.MaterialComponents.SmallComponent">
         <item name="cornerFamily">rounded</item>
         <item name="cornerSize">4dp</item>
         <item name="elevation">0dp</item>
@@ -84,5 +84,9 @@
         <item name="android:theme">@style/StyledFabTheme</item>
     </style>
 
+    <style name="CategoriesDimension" parent="">
+        <item name="android:padding">15dp</item>
+        <item name="android:foreground">?attr/selectableItemBackgroundBorderless</item>
+    </style>
 
 </resources>

@@ -8,7 +8,7 @@
 
     <ImageButton
         android:id="@+id/category_image"
-        style="@style/CategoriesDimension"
+        style="@style/ImageButton.Style"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="center"

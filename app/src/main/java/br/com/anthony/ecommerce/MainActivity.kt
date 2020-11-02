@@ -19,7 +19,7 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.fragment_categories)
 
-        viewManager = GridLayoutManager(this, 3)
+        viewManager = GridLayoutManager(this, 2)
         viewAdapter = CategoryAdapter()
 
         recyclerView = findViewById(R.id.categories_list)

@@ -15,4 +15,7 @@
     <string name="already_have_on_account">Already have on account?</string>
     <string name="image_facebook">Image Facebook</string>
     <string name="categories_images">Categories Images</string>
+    <string name="todo">TODO</string>
+    <string name="add_to_cart">Add to cart</string>
+    <string name="each">Each</string>
 </resources>

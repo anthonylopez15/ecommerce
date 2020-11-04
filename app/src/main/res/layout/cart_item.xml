@@ -1,0 +1,172 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:gravity="center"
+    android:orientation="vertical">
+
+
+    <com.google.android.material.card.MaterialCardView
+        android:id="@+id/card"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="8dp"
+        app:cardBackgroundColor="@android:color/white"
+        app:cardElevation="0dp"
+        app:layout_constraintTop_toTopOf="parent"
+        app:strokeColor="@color/secondaryVariantColor"
+        app:strokeWidth="0.8dp">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <br.com.anthony.ecommerce.DynamicHeightImageView
+                android:id="@+id/image_product"
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:adjustViewBounds="true"
+                android:contentDescription="@string/todo"
+                android:padding="16dp"
+                android:scaleType="centerCrop"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                tools:srcCompat="@drawable/ic_fish" />
+
+            <LinearLayout
+                android:id="@+id/prod_details"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_marginTop="8dp"
+                android:layout_marginStart="6dp"
+                app:layout_constraintStart_toEndOf="@id/image_product"
+                app:layout_constraintBottom_toTopOf="@id/buttons"
+                app:layout_constraintTop_toTopOf="parent">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="4dp"
+                    android:layout_marginBottom="2dp"
+                    android:text="R$10,00 x 3"
+                    android:textAppearance="@style/TextAppearance.MaterialComponents.Subtitle2"
+                    android:textColor="?attr/colorAccent"
+                    android:textColorHint="@color/secondaryColor" />
+
+                <TextView
+                    android:id="@+id/product_desc"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="2dp"
+                    android:layout_marginBottom="4dp"
+                    android:fontFamily="@font/roboto_bold"
+                    android:text="Arroz tio João"
+                    android:textAppearance="@style/TextAppearance.MaterialComponents.Subtitle2"
+                    android:textColor="@color/primaryTextColor"
+                    android:textStyle="bold" />
+
+            </LinearLayout>
+
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/buttons"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="16dp"
+                android:layout_marginTop="4dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="@+id/prod_details"
+                app:layout_constraintTop_toBottomOf="@id/prod_details">
+
+                <com.google.android.material.floatingactionbutton.ExtendedFloatingActionButton
+                    android:id="@+id/btn_remove"
+                    style="@style/Widget.App.FloatingActionButtonSquareCut"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:contentDescription="@string/todo"
+                    android:stateListAnimator="@null"
+                    app:collapsedSize="40dp"
+                    app:elevation="0dp"
+                    app:icon="@drawable/ic_remove"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toStartOf="@+id/tv_quantity"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:strokeColor="@color/secondaryColor"
+                    app:strokeWidth="0.5dp" />
+
+                <TextView
+                    android:id="@+id/tv_quantity"
+                    android:layout_width="0dp"
+                    android:layout_height="0dp"
+                    android:background="@drawable/square_border"
+                    android:gravity="center"
+                    android:text="3"
+                    android:textAlignment="gravity"
+                    android:textAppearance="@style/TextAppearance.MaterialComponents.Body1"
+                    android:textColor="@color/colorAccent"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toStartOf="@+id/btn_add"
+                    app:layout_constraintStart_toEndOf="@+id/btn_remove"
+                    app:layout_constraintTop_toTopOf="@id/btn_remove"
+                    app:layout_constraintWidth_percent="0.39" />
+
+                <com.google.android.material.floatingactionbutton.ExtendedFloatingActionButton
+                    android:id="@+id/btn_add"
+                    style="@style/Widget.App.FloatingActionButtonSquareCut"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:contentDescription="@string/todo"
+                    android:stateListAnimator="@null"
+                    app:collapsedSize="40dp"
+                    app:elevation="0dp"
+                    app:icon="@drawable/ic_add"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toEndOf="@+id/tv_quantity"
+                    app:layout_constraintTop_toTopOf="@id/btn_remove"
+                    app:strokeColor="@color/secondaryColor"
+                    app:strokeWidth="0.5dp" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <TextView
+                android:id="@+id/cart_item_value"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="16dp"
+                android:layout_marginTop="5dp"
+                android:fontFamily="sans-serif"
+                android:text="R$ 30,00"
+                android:textAppearance="@style/TextAppearance.MaterialComponents.Subtitle2"
+                android:textColor="@color/secondaryColor"
+                android:textSize="14sp"
+                android:textStyle="bold"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="@id/prod_details" />
+
+            <com.google.android.material.floatingactionbutton.ExtendedFloatingActionButton
+                android:id="@+id/cancel_item"
+                style="@style/Widget.App.FloatingActionButtonSquareRounded"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:stateListAnimator="@null"
+                app:backgroundTint="@color/secondaryVariantColor"
+                app:borderWidth="0dp"
+                app:collapsedSize="40dp"
+                app:elevation="0dp"
+                app:icon="@drawable/ic_close"
+                app:layout_constraintBottom_toBottomOf="@id/buttons"
+                app:layout_constraintEnd_toEndOf="@id/cart_item_value" />
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </com.google.android.material.card.MaterialCardView>
+
+</LinearLayout>

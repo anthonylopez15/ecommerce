@@ -17,12 +17,12 @@ class MainActivity : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.fragment_categories)
+        setContentView(R.layout.fragment_cart)
 
-        viewManager = GridLayoutManager(this, 2)
+        viewManager = GridLayoutManager(this, 1)
         viewAdapter = CategoryAdapter()
 
-        recyclerView = findViewById(R.id.categories_list)
+        recyclerView = findViewById(R.id.cart_list)
         recyclerView.layoutManager = viewManager
         recyclerView.adapter = viewAdapter
     }

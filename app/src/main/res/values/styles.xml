@@ -1,4 +1,4 @@
-<resources>
+<resources xmlns:tools="http://schemas.android.com/tools">
     <!-- Base application theme. -->
     <style name="AppTheme" parent="Theme.MaterialComponents.Light.NoActionBar">
         <!-- Customize your theme here. -->
@@ -12,19 +12,29 @@
         <item name="font">@font/roboto</item>
     </style>
 
-    <style name="ShapeAppearance.App.SmallComponent" parent="ShapeAppearance.MaterialComponents.SmallComponent">
+    <style name="ShapeAppearance.App.SmallComponent.Rounded" parent="ShapeAppearance.MaterialComponents.SmallComponent">
         <item name="cornerFamily">rounded</item>
         <item name="cornerSize">4dp</item>
-        <item name="elevation">0dp</item>
     </style>
 
-    <style name="Widget.App.FloatingActionButtonSquare" parent="Widget.MaterialComponents.ExtendedFloatingActionButton.Icon">
+    <style name="Widget.App.FloatingActionButtonSquareRounded" parent="Widget.MaterialComponents.ExtendedFloatingActionButton.Icon">
         <item name="materialThemeOverlay">@style/ThemeOverlay.App.FloatingActionButton</item>
-        <item name="shapeAppearanceOverlay">@style/ShapeAppearance.App.SmallComponent</item>
+        <item name="shapeAppearanceOverlay">@style/ShapeAppearance.App.SmallComponent.Rounded</item>
    </style>
+
+    <style name="ShapeAppearance.App.SmallComponent.Cut" parent="ShapeAppearance.MaterialComponents.SmallComponent">
+        <item name="cornerFamily">cut</item>
+        <item name="cornerSize">0dp</item>
+    </style>
+
+    <style name="Widget.App.FloatingActionButtonSquareCut" parent="Widget.MaterialComponents.ExtendedFloatingActionButton.Icon">
+        <item name="materialThemeOverlay">@style/ThemeOverlay.App.FloatingActionButton</item>
+        <item name="shapeAppearanceOverlay">@style/ShapeAppearance.App.SmallComponent.Cut</item>
+    </style>
 
     <style name="Widget.App.FloatingActionButton" parent="Widget.MaterialComponents.FloatingActionButton">
         <item name="materialThemeOverlay">@style/ThemeOverlay.App.FloatingActionButton</item>
+        <item name="shapeAppearanceOverlay">@style/ShapeAppearance.App.SmallComponent.Rounded</item>
         <item name="android:foreground">@drawable/circle_border</item>
     </style>
 
@@ -87,6 +97,29 @@
     <style name="ImageButton.Style" parent="">
         <item name="android:padding">8dp</item>
         <item name="android:foreground">?attr/selectableItemBackgroundBorderless</item>
+    </style>
+
+    <style name="Widget.App.Button.OutlinedButton.IconOnly" parent="Widget.MaterialComponents.Button.OutlinedButton">
+        <item name="iconPadding">0dp</item>
+        <item name="android:insetTop">0dp</item>
+        <item name="android:insetBottom">0dp</item>
+        <item name="android:paddingLeft">12dp</item>
+        <item name="android:paddingRight">12dp</item>
+        <item name="android:minWidth">48dp</item>
+        <item name="android:minHeight">48dp</item>
+    </style>
+
+    <style name="TextViewNormal14">
+        <item name="android:fontFamily">@font/roboto</item>
+        <item name="android:textAppearance">@style/TextAppearance.MaterialComponents.Body2</item>
+        <item name="android:textColor">@color/primaryTextColor</item>
+    </style>
+
+    <style name="TextViewBold16">
+        <item name="android:fontFamily">@font/roboto_bold</item>
+        <item name="android:textAppearance">@style/TextAppearance.MaterialComponents.Subtitle1
+        </item>
+        <item name="android:textColor">@color/primaryTextColor</item>
     </style>
 
 </resources>

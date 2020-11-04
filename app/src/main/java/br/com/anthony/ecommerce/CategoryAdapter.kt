@@ -29,7 +29,7 @@ class CategoryAdapter : RecyclerView.Adapter<CategoryAdapter.ViewHolder>() {
                 6 -> R.drawable.ic_cooking
                 7 -> R.drawable.ic_food
                 8 -> R.drawable.ic_baby_care
-                else -> R.drawable.ic_fruits
+                else -> R.mipmap.arroz_tio_joao
             }
         )
 
@@ -39,7 +39,7 @@ class CategoryAdapter : RecyclerView.Adapter<CategoryAdapter.ViewHolder>() {
 
         val layoutInflater = LayoutInflater.from(parent.context)
         val view = layoutInflater
-            .inflate(R.layout.product_item, parent, false)
+            .inflate(R.layout.cart_item, parent, false)
 
         return ViewHolder(view)
     }

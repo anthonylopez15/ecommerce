@@ -51,10 +51,10 @@
                 app:tintMode="src_atop" />
 
 
-            <ImageView
+            <br.com.anthony.ecommerce.DynamicHeightImageView
                 android:id="@+id/image_product"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
+                android:layout_width="120dp"
+                android:layout_height="120dp"
                 android:contentDescription="@string/todo"
                 android:paddingTop="4dp"
                 android:scaleType="centerCrop"
@@ -119,20 +119,20 @@
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@id/prod_details" />
 
-            <com.google.android.material.button.MaterialButton
-                android:id="@+id/buttons"
-                style="@style/Widget.MaterialComponents.Button.TextButton"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="@string/add_to_cart"
-                android:textColor="@color/secondaryColor"
-                app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@id/prod_details"
-                app:rippleColor="@color/primaryDarkColor" />
+<!--            <com.google.android.material.button.MaterialButton-->
+<!--                android:id="@+id/buttons"-->
+<!--                style="@style/Widget.MaterialComponents.Button.TextButton"-->
+<!--                android:layout_width="wrap_content"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:text="@string/add_to_cart"-->
+<!--                android:textColor="@color/secondaryColor"-->
+<!--                app:layout_constraintBottom_toBottomOf="parent"-->
+<!--                app:layout_constraintEnd_toEndOf="parent"-->
+<!--                app:layout_constraintStart_toStartOf="parent"-->
+<!--                app:layout_constraintTop_toBottomOf="@id/prod_details"-->
+<!--                app:rippleColor="@color/primaryDarkColor" />-->
 
-            <!--<androidx.constraintlayout.widget.ConstraintLayout
+            <androidx.constraintlayout.widget.ConstraintLayout
                 android:id="@+id/buttons"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
@@ -211,7 +211,7 @@
                     app:layout_constraintWidth_percent="0.2" />
 
 
-            </androidx.constraintlayout.widget.ConstraintLayout>-->
+            </androidx.constraintlayout.widget.ConstraintLayout>
 
 
         </androidx.constraintlayout.widget.ConstraintLayout>
